@@ -72,9 +72,9 @@ void loop() {
   case 2:
     if (tag == "8319420126" && state1 == 0){
     count++;
-    lcd.setCursor(1, 0);
+    lcd.setCursor(0, 1);
     lcd.print("COUNT = ");
-    lcd.setCursor(1, 8);
+    lcd.setCursor(8, 1);
     lcd.print(count);
     digitalWrite(ledgreen, HIGH);
     myservo.write(180);
@@ -90,9 +90,9 @@ void loop() {
 
     if (tag == "8319420126" && state1 == 1){
     count--;
-    lcd.setCursor(1, 0);
+    lcd.setCursor(0, 1);
     lcd.print("COUNT = ");
-    lcd.setCursor(1, 8);
+    lcd.setCursor(8, 1);
     lcd.print(count);
     digitalWrite(ledgreen, HIGH);
     myservo.write(180);
@@ -108,9 +108,9 @@ void loop() {
 
     if (tag == "13116319226" && state2 == 0){
       count++;
-      lcd.setCursor(1, 0);
+      lcd.setCursor(0, 1);
       lcd.print("COUNT = ");
-      lcd.setCursor(1, 8);
+      lcd.setCursor(8, 1);
       lcd.print(count);
       digitalWrite(ledgreen, HIGH);
       myservo.write(180);
@@ -126,9 +126,9 @@ void loop() {
 
     if (tag == "13116319226" && state2 == 1){
       count--;
-      lcd.setCursor(1, 0);
+      lcd.setCursor(0, 1);
       lcd.print("COUNT = ");
-      lcd.setCursor(1, 8);
+      lcd.setCursor(8, 1);
       lcd.print(count);
       digitalWrite(ledgreen, HIGH);
       myservo.write(180);
@@ -145,7 +145,7 @@ void loop() {
     if (tag == "154466437"){
       lcd.setCursor(0, 0);
       lcd.print("                ");
-      lcd.setCursor(0, 3);
+      lcd.setCursor(3, 0);
       lcd.print("WRONG BUS");
       digitalWrite(buzz, HIGH);
       digitalWrite(ledred, HIGH);
@@ -165,4 +165,5 @@ void loop() {
     break;
   }
   
-}
+}   
+  
